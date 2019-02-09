@@ -1,45 +1,46 @@
 
-/**
- * Write a description of class BasicCalculator here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class BasicCalculator
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class BasicCalculator
-     */
+{ 
     public BasicCalculator()
     {
-        // initialise instance variables
-        x = 0;
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Double add(double inputOne, double inputTwo)
+    {  
+        return inputOne + inputTwo;
     }
     
-     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int add(int y, int x)
-    {
-        // put your code here
-        return x + y;
+    public Double subtract(double inputOne, double inputTwo) {
+        return inputOne - inputTwo;
+    }
+    
+    public Double multiply(double inputOne, double inputTwo){
+         
+        return inputOne * inputTwo;
+    }
+    
+    public Double divide(double inputOne, double inputTwo){
+        return inputOne / inputTwo;
+    }
+    
+    public Double square(double inputOne) {
+        double ans = Math.pow(inputOne,2);
+        return ans;
+    }
+    
+    public Double calcVariableExponentiation(double inputOne, double inputTwo) {
+        double ans = Math.pow(inputOne, inputTwo);
+        return ans;
+    }
+    
+    public Double squareRoot(double inputOne) {
+        double ans = Math.sqrt(inputOne);
+        return ans;
+    }
+    
+    public Double calcInverse(double inputOne) {
+        double ans = 1/inputOne;
+        return ans;
     }
 }
