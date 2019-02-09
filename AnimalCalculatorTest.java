@@ -5,6 +5,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
+
 /**
  * The test class AnimalCalculatorTest.
  *
@@ -12,31 +14,22 @@ import org.junit.Test;
  * @version (a version number or a date)
  */
 public class AnimalCalculatorTest
-{
-    /**
-     * Default constructor for test class AnimalCalculatorTest
-     */
-    public AnimalCalculatorTest()
-    {
+{ AnimalCalculator animalCalc = new AnimalCalculator();
+    
+    @Test
+    public void testFoxDoubleMethod() {
+        
+        double testAge = 25;
+        
+        double expected = 143;
+        
+        double actual = animalCalc.fox(testAge);
+        
+        assertEquals(expected, actual, 0.001);
+        
     }
-
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
+        
+        
+    
+    
 }
