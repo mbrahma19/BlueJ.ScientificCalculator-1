@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class AnimalConsole
+public class AnimalConsole extends BasicConsole
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -16,7 +16,6 @@ public class AnimalConsole
     public AnimalConsole()
     {
         // initialise instance variables
-        x = 0;
     }
 
     /**
@@ -28,6 +27,6 @@ public class AnimalConsole
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return y;
     }
 }
