@@ -1,4 +1,4 @@
-import java.util.Math;
+import java.lang.Math;
 
 public class ScientificCalculator extends BasicCalculator
 {
@@ -17,7 +17,7 @@ public class ScientificCalculator extends BasicCalculator
         // initialise instance variables
         x = 0;
     }
-
+    
     public double trigFunc(double x)
     {
         if ( cosString = Math.cos(x)){
@@ -71,6 +71,25 @@ public class ScientificCalculator extends BasicCalculator
 
             return super.add(y,x);
         }
-    }
+    } 
 
+    public String convertToBinary(double input1) {
+        
+        int myInt = (int)Math.round(input1);
+
+        String ans = Integer.toBinaryString(myInt);
+        return ans;
+    }
+    
+    public String convertToHex(double input1) {
+         int myInt = (int)Math.round(input1);
+         String ans = Integer.toHexString(myInt);
+         return ans;
+    }
+    
+    public String convertToOctal(double input1) {
+         int myInt = (int)Math.round(input1);
+         String ans = Integer.toOctalString(myInt);
+         return ans;
+    }
 }
