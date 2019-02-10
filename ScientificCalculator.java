@@ -3,7 +3,7 @@ import java.lang.Math;
 public class ScientificCalculator extends BasicCalculator
 {
     // instance variables - replace the example below with your own
-    private double inputDegrees;
+    private double degX;
     double radianX;
 
     
@@ -15,8 +15,8 @@ public class ScientificCalculator extends BasicCalculator
     }
 
     public double degreesToRadians(double r){
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        double degX = (r%360);
+        double radianX = Math.toRadians(degX);
 
         return radianX;
 
@@ -26,8 +26,8 @@ public class ScientificCalculator extends BasicCalculator
     public double cosRadFunc(double r)
     
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        double radianX =this.degreesToRadians(r); 
+        
         
         double cosRad = Math.cos(radianX);
 
@@ -37,23 +37,23 @@ public class ScientificCalculator extends BasicCalculator
 
     }
 
-    public double coshRadFunc(double r)
+    public double acosRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        double radianX =this.degreesToRadians(r); 
         
-        double coshRad = Math.cos(radianX);
+        double acosRad = Math.acos(radianX);
 
-        System.out.println(coshRad);
+        System.out.println(acosRad);
 
-        return coshRad;
+        return acosRad;
 
     }
 
     public double tanRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        
+        double radianX =this.degreesToRadians(r);
+        
         
         double tanRad = Math.tan(radianX);
 
@@ -63,22 +63,22 @@ public class ScientificCalculator extends BasicCalculator
 
     }
 
-    public double tanhRadFunc(double r)
+    public double atanRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
         
-        double tanhRad = Math.tanh(radianX);
+        double radianX =this.degreesToRadians(r); 
+        
+        double atanRad = Math.atan(radianX);
 
-        System.out.println(tanhRad);
+        System.out.println(atanRad);
 
-        return tanhRad;
+        return atanRad;
     }
 
     public double sinRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        
+        double radianX =this.degreesToRadians(r); 
         
         double sinRad = Math.sin(radianX);
 
@@ -87,94 +87,20 @@ public class ScientificCalculator extends BasicCalculator
         return sinRad;
     }
 
-    public double sinhRadFunc(double r)
+    public double asinRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
         
-        double sinhRad = Math.sinh(radianX);
+        
+        
+        double asinRad = Math.asin(radianX);
 
-        System.out.println(sinhRad);
+        System.out.println(asinRad);
 
-        return sinhRad;
+        return asinRad;
 
     }
 
-    public double cosDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double cosDeg = Math.cos(radianX);
-
-        System.out.println(cosDeg);
-
-        return cosDeg;
-    }
-
-    public double coshDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double coshDeg = Math.cosh(radianX);
-
-        System.out.println(coshDeg);
-
-        return coshDeg;
-    }
-
-    public double tanDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double tanDeg = Math.tan(radianX);
-
-        System.out.println(tanDeg);
-
-        return tanDeg;
-    }
-
-    public double tanhDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double tanhDeg = Math.tanh(radianX);
-
-        System.out.println(tanhDeg);
-
-        return tanhDeg;
-    }
-
-    public double sinDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double sinDeg = Math.cos(radianX);
-
-        System.out.println(sinDeg);
-
-        return sinDeg;
-
-    }
-
-    public double sinhDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-        
-        double sinhDeg = Math.cos(radianX);
-
-        System.out.println(sinhDeg);
-
-        return sinhDeg;
-
-    }
-
-
+    
     public String convertToBinary(double input1) {
 
         int myInt = (int)Math.round(input1);
