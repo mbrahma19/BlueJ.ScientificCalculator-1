@@ -3,7 +3,7 @@ import java.lang.Math;
 public class ScientificCalculator extends BasicCalculator
 {
     // instance variables - replace the example below with your own
-    private double inputDegrees;
+    private double degX;
     double radianX;
 
     public ScientificCalculator()
@@ -13,81 +13,69 @@ public class ScientificCalculator extends BasicCalculator
 
     }
 
-    public double degreesToRadians(double r){
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+    public double degreesToRadians(double r)
+    {
+        double degX = (r%360);
+        
+        double radianX = Math.toRadians(degX);
 
         return radianX;
-
     }
 
     public double cosRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
 
+        double radianX =this.degreesToRadians(r); 
+   
         double cosRad = Math.cos(radianX);
 
-        System.out.println(cosRad);
 
         return cosRad;
 
     }
 
-    public double coshRadFunc(double r)
+    public double acosRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+        double radianX =this.degreesToRadians(r); 
+        
+        double acosRad = Math.acos(radianX);
 
-        double coshRad = Math.cos(radianX);
-
-        System.out.println(coshRad);
-
-        return coshRad;
+        return acosRad;
 
     }
 
     public double tanRadFunc(double r)
-    {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
-
+    {       
+        double radianX =this.degreesToRadians(r);
+        
         double tanRad = Math.tan(radianX);
-
-        System.out.println(tanRad);
 
         return tanRad;
 
     }
 
-    public double tanhRadFunc(double r)
-    {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+    public double atanRadFunc(double r)
+    {       
+        double radianX =this.degreesToRadians(r); 
+        
+        double atanRad = Math.atan(radianX);
 
-        double tanhRad = Math.tanh(radianX);
-
-        System.out.println(tanhRad);
-
-        return tanhRad;
+        return atanRad;
     }
 
     public double sinRadFunc(double r)
     {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
-
+        double radianX =this.degreesToRadians(r); 
+        
         double sinRad = Math.sin(radianX);
-
-        System.out.println(sinRad);
 
         return sinRad;
     }
 
-    public double sinhRadFunc(double r)
-    {
-        double normX = (r%360);
-        double radianX = Math.toRadians(normX);
+    public double asinRadFunc(double r)
+    { 
+        
+        double asinRad = Math.asin(radianX);
 
         double sinhRad = Math.sinh(radianX);
 
@@ -96,7 +84,7 @@ public class ScientificCalculator extends BasicCalculator
         return sinhRad;
 
     }
-
+/**
     public double cosDegFunc(double d)
     {
         double normX = (d%360);
@@ -104,22 +92,22 @@ public class ScientificCalculator extends BasicCalculator
 
         double cosDeg = Math.cos(radianX);
 
-        System.out.println(cosDeg);
-
         return cosDeg;
     }
+
 
     public double coshDegFunc(double d)
     {
         double normX = (d%360);
+        
         double radianX = Math.toRadians(normX);
 
         double coshDeg = Math.cosh(radianX);
 
-        System.out.println(coshDeg);
-
-        return coshDeg;
+        return asinRad;
     }
+
+    
 
     public double tanDegFunc(double d)
     {
@@ -170,6 +158,7 @@ public class ScientificCalculator extends BasicCalculator
         return sinhDeg;
 
     }
+*/
 
     public String convertToBinary(double input1) {
         int myInt = (int)Math.round(input1);

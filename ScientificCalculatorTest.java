@@ -15,49 +15,76 @@ public class ScientificCalculatorTest
 {
     ScientificCalculator sc = new ScientificCalculator();
     
-    /**
-     * Default constructor for test class ScientificCalculatorTest
-     */
-    public ScientificCalculatorTest()
-    {
-    }
-
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-    /*
     @Test
-    public void addTest(){
-        int y = 2;
-        int x = 2;
+    public void testdegreesToRadians(){
+        double r = 90;
+        double expect = 1.5708;
         
-        int expected = 4;
-        int actual = new ScientificCalculator().sampleMethod(y,x);
-    }*/
+        double actual = sc.degreesToRadians(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
     
+    @Test
+    public void testcosRadFunc(){
+        double r = 120;
+        double expect = -0.5;
+        
+        double actual = sc.cosRadFunc(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
+    
+    @Test
+    public void testacosRadFunc(){
+        double r = 1;
+        double expect = 1.553342440621;
+        
+        double actual = sc.acosRadFunc(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
+    
+    @Test
+    public void testtanRadFunc(){
+        double r = 50;
+        double expect = 1.19175359259421;
+        
+        double actual = sc.tanRadFunc(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
+    
+    @Test
+    public void testatanRadFunc(){
+        double r = 75;
+        double expect = 0.91843192411957;
+        
+        double actual = sc.atanRadFunc(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
+    
+    @Test
+    public void testsinRadFunc(){
+        double r = 90;
+        double expect = 1;
+        
+        double actual = sc.sinRadFunc(r);
+        
+        assertEquals(expect, actual, 0.0001);
+    }
+    
+    
+    
+ 
     @Test
     public void testConvertToBinary() {
         double testInput1 = 27;
         String expected = "11011";
         
         String actual = sc.convertToBinary(testInput1);
-        System.out.println();
+        
 
         assertEquals(expected, actual);
     }
@@ -68,7 +95,7 @@ public class ScientificCalculatorTest
         String expected = "21";
         
         String actual = sc.convertToHex(testInput1);
-        System.out.println();
+        
 
         assertEquals(expected, actual);
         
@@ -80,7 +107,7 @@ public class ScientificCalculatorTest
         String expected = "114";
         
         String actual = sc.convertToOctal(testInput1);
-        System.out.println();
+        
 
         assertEquals(expected, actual);
     }
