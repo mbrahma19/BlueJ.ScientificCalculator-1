@@ -36,7 +36,6 @@ public class AnimalCalculator extends BasicCalculator
     public double fox(double age){
         String foxPrompt = "This is your age in fox years";
         double result = Math.rint(age * fox);
-        System.out.printf("%s : %.0f", foxPrompt,result);// put your code here
 
         return result;
     }
@@ -45,8 +44,7 @@ public class AnimalCalculator extends BasicCalculator
     public double hippo(double age){
         String hippoPrompt = "This is your age in hippopotamus years";
         double result = Math.rint(age * hippo);
-        System.out.printf("%s : %.0f", hippoPrompt,result);// put your code here
-
+        
         return result;
     }
     // code for wolf age method
@@ -54,7 +52,6 @@ public class AnimalCalculator extends BasicCalculator
     public double wolf(double age){
         String wolfPrompt = "This is your age in wolf years";
         double result = Math.rint(age * wolf);
-        System.out.printf("%s : %.0f", wolfPrompt,result);// put your code here
 
         return result;
     }
@@ -63,7 +60,6 @@ public class AnimalCalculator extends BasicCalculator
     public double elephant(double age){
         String elephantPrompt = "This is your age in elephant years";
         double result = Math.rint(age * elephant);
-        System.out.printf("%s : %.0f", elephantPrompt,result);// put your code here
 
         return result;
     }
@@ -72,7 +68,6 @@ public class AnimalCalculator extends BasicCalculator
     public double kangaroo(double age){
         String kangarooPrompt = "This is your age in kangaroo years";
         double result = Math.rint(age * kangaroo);
-        System.out.printf("%s : %.0f", kangarooPrompt,result);
 
         return result;
     }
@@ -81,7 +76,6 @@ public class AnimalCalculator extends BasicCalculator
     public double lion(double age){
         String lionPrompt = "This is your age in lion years";
         double result = Math.rint(age * lion);
-        System.out.printf("%s : %.0f", lionPrompt,result);
 
         return result;
     }
