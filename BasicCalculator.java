@@ -15,12 +15,12 @@ public class BasicCalculator
         return inputOne - inputTwo;
     }
     
-    public Double multiply(double inputOne, double inputTwo){
-         
+    public Double multiply(double inputOne, double inputTwo){ 
         return inputOne * inputTwo;
     }
     
     public Double divide(double inputOne, double inputTwo){
+        
         return inputOne / inputTwo;
     }
     
@@ -42,5 +42,11 @@ public class BasicCalculator
     public Double calcInverse(double inputOne) {
         double ans = 1/inputOne;
         return ans;
+    }
+    
+    public Double convertInputPosNeg(double inputOne){
+      double ans = inputOne * -1;
+      
+      return ans;
     }
 }

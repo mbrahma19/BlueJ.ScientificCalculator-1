@@ -13,6 +13,8 @@ import org.junit.Test;
  */
 public class ScientificCalculatorTest
 {
+    ScientificCalculator sc = new ScientificCalculator();
+    
     /**
      * Default constructor for test class ScientificCalculatorTest
      */
@@ -39,7 +41,7 @@ public class ScientificCalculatorTest
     public void tearDown()
     {
     }
-    
+    /*
     @Test
     public void addTest(){
         int y = 2;
@@ -47,5 +49,39 @@ public class ScientificCalculatorTest
         
         int expected = 4;
         int actual = new ScientificCalculator().sampleMethod(y,x);
+    }*/
+    
+    @Test
+    public void testConvertToBinary() {
+        double testInput1 = 27;
+        String expected = "11011";
+        
+        String actual = sc.convertToBinary(testInput1);
+        System.out.println();
+
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void testConvertToHex() {
+        double testInput1 = 33;
+        String expected = "21";
+        
+        String actual = sc.convertToHex(testInput1);
+        System.out.println();
+
+        assertEquals(expected, actual);
+        
+    }
+    
+    @Test
+    public void testConvertToOctal() {
+        double testInput1 = 76;
+        String expected = "114";
+        
+        String actual = sc.convertToOctal(testInput1);
+        System.out.println();
+
+        assertEquals(expected, actual);
     }
 }
