@@ -6,7 +6,6 @@ public class ScientificCalculator extends BasicCalculator
     private double inputDegrees;
     double radianX;
 
-    
     public ScientificCalculator()
     { 
 
@@ -22,13 +21,11 @@ public class ScientificCalculator extends BasicCalculator
 
     }
 
-
     public double cosRadFunc(double r)
-    
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double cosRad = Math.cos(radianX);
 
         System.out.println(cosRad);
@@ -41,7 +38,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double coshRad = Math.cos(radianX);
 
         System.out.println(coshRad);
@@ -54,7 +51,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double tanRad = Math.tan(radianX);
 
         System.out.println(tanRad);
@@ -67,7 +64,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double tanhRad = Math.tanh(radianX);
 
         System.out.println(tanhRad);
@@ -79,7 +76,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double sinRad = Math.sin(radianX);
 
         System.out.println(sinRad);
@@ -91,7 +88,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (r%360);
         double radianX = Math.toRadians(normX);
-        
+
         double sinhRad = Math.sinh(radianX);
 
         System.out.println(sinhRad);
@@ -104,7 +101,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double cosDeg = Math.cos(radianX);
 
         System.out.println(cosDeg);
@@ -116,7 +113,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double coshDeg = Math.cosh(radianX);
 
         System.out.println(coshDeg);
@@ -128,7 +125,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double tanDeg = Math.tan(radianX);
 
         System.out.println(tanDeg);
@@ -140,7 +137,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double tanhDeg = Math.tanh(radianX);
 
         System.out.println(tanhDeg);
@@ -152,7 +149,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double sinDeg = Math.cos(radianX);
 
         System.out.println(sinDeg);
@@ -165,7 +162,7 @@ public class ScientificCalculator extends BasicCalculator
     {
         double normX = (d%360);
         double radianX = Math.toRadians(normX);
-        
+
         double sinhDeg = Math.cos(radianX);
 
         System.out.println(sinhDeg);
@@ -174,11 +171,8 @@ public class ScientificCalculator extends BasicCalculator
 
     }
 
-
     public String convertToBinary(double input1) {
-
         int myInt = (int)Math.round(input1);
-
         String ans = Integer.toBinaryString(myInt);
         return ans;
     }
@@ -194,4 +188,13 @@ public class ScientificCalculator extends BasicCalculator
         String ans = Integer.toOctalString(myInt);
         return ans;
     }
-}
+
+    public double calculateFactorial(double input) {
+        double ans = 1;
+        for(double i = 2; i <= input; i++) {
+            ans *=i;   
+        }
+        return ans;
+    }
+
+}   
