@@ -84,4 +84,15 @@ public class ScientificCalculatorTest
 
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testCalcFactorial() {
+        double testInput1 = 4;
+        double expected = 24;
+        
+        double actual = sc.calculateFactorial(testInput1);
+
+        assertEquals(expected, actual, 0.0001);
+        
+    }
 }
