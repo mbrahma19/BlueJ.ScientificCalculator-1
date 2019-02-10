@@ -1,4 +1,8 @@
-
+import java.io.Console;
+import java.util.Scanner;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 /**
  * Write a description of class BasicConsole here.
  *
@@ -8,7 +12,8 @@
 public class BasicConsole
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private final Scanner scanner;
+    private final PrintStream out;
 
     /**
      * Constructor for objects of class BasicConsole
@@ -16,18 +21,49 @@ public class BasicConsole
     public BasicConsole()
     {
         // initialise instance variables
-        x = 0;
+        this(System.in,System.out);
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Constructor for objects of class BasicConsole
      */
-    public int sampleMethod(int y)
+    public BasicConsole(Scanner scanner, PrintStream printStream)
     {
-        // put your code here
-        return x + y;
+        // initialise instance variables
+        this.scanner = scanner;
+        this.out = printStream;
     }
+    
+    /**
+     * Constructor for objects of class BasicConsole
+     */
+    public BasicConsole(InputStream inputStream, OutputStream outputStream)
+    {
+        // 
+        this(new Scanner(inputStream), new PrintStream(outputStream));
+    }
+     
+    /**
+     * @param val  : text to display on console
+     * @param args : optional arguments to send for string formatting
+     */
+    public void println(String val, Object... args) {
+        out.format(val, args);
+        out.println();
+    }
+    
+    public String getStringInput(String prompt, Object... args) {
+        println(prompt,args);
+        return scanner.nextLine();
+    }
+    
+    public void flush(){
+        out.flush();
+    }
+    
+    public void basicMain(){
+        String prompt = git
+    }
+    
+
 }

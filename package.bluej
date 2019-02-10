@@ -1,4 +1,14 @@
 #BlueJ package file
+<<<<<<< HEAD
+dependency1.from=ScientificCalculatorTest
+dependency1.to=ScientificCalculator
+dependency1.type=UsesDependency
+editor.fx.0.height=750
+editor.fx.0.width=924
+editor.fx.0.x=444
+editor.fx.0.y=76
+objectbench.height=214
+=======
 dependency1.from=BasicCalculatorTest
 dependency1.to=BasicCalculator
 dependency1.type=UsesDependency
@@ -7,14 +17,21 @@ editor.fx.0.width=800
 editor.fx.0.x=240
 editor.fx.0.y=23
 objectbench.height=197
+>>>>>>> origin/master
 objectbench.width=595
 package.divider.horizontal=0.6
 package.divider.vertical=0.6851851851851852
 package.editor.height=437
 package.editor.width=493
+<<<<<<< HEAD
+package.editor.x=265
+package.editor.y=128
+package.frame.height=759
+=======
 package.editor.x=10
 package.editor.y=23
 package.frame.height=706
+>>>>>>> origin/master
 package.frame.width=619
 package.numDependencies=1
 package.numTargets=10
@@ -31,54 +48,111 @@ target1.name=ScientificConsole
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=130
+<<<<<<< HEAD
+target1.x=40
+target1.y=350
+=======
 target1.x=10
 target1.y=130
+>>>>>>> origin/master
 target10.height=50
 target10.name=MainApplication
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
+<<<<<<< HEAD
+target10.x=180
+target10.y=30
+=======
 target10.x=80
 target10.y=70
+>>>>>>> origin/master
 target2.height=50
 target2.name=AnimalConsole
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
+<<<<<<< HEAD
+target2.x=310
+target2.y=330
+=======
 target2.x=150
 target2.y=130
+>>>>>>> origin/master
 target3.height=50
 target3.name=BasicCalculatorTest
 target3.showInterface=false
 target3.type=UnitTestTargetJunit4
+<<<<<<< HEAD
+target3.width=120
+target3.x=210
+target3.y=90
+target4.association=ScientificCalculatorTest
+=======
 target3.width=150
 target3.x=310
 target3.y=340
+>>>>>>> origin/master
 target4.height=50
 target4.name=ScientificCalculator
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=150
 target4.x=10
+<<<<<<< HEAD
+target4.y=240
+target5.association=BasicCalculatorTest
+=======
 target4.y=250
+>>>>>>> origin/master
 target5.height=50
 target5.name=BasicCalculator
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
+<<<<<<< HEAD
+target5.x=180
+target5.y=120
+target6.association=AnimalCalculatorTest
+=======
 target5.x=290
 target5.y=230
+>>>>>>> origin/master
 target6.height=50
 target6.name=AnimalCalculator
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=130
+<<<<<<< HEAD
+target6.x=300
+target6.y=220
+=======
 target6.x=10
 target6.y=310
+>>>>>>> origin/master
 target7.height=50
 target7.name=AnimalCalculatorTest
 target7.showInterface=false
 target7.type=UnitTestTargetJunit4
+<<<<<<< HEAD
+target7.width=130
+target7.x=330
+target7.y=190
+target8.height=50
+target8.name=BasicConsole
+target8.showInterface=false
+target8.type=ClassTarget
+target8.width=110
+target8.x=330
+target8.y=80
+target9.height=50
+target9.name=ScientificCalculatorTest
+target9.showInterface=false
+target9.type=UnitTestTargetJunit4
+target9.width=150
+target9.x=40
+target9.y=210
+=======
 target7.width=160
 target7.x=10
 target7.y=370
@@ -96,3 +170,4 @@ target9.type=ClassTarget
 target9.width=110
 target9.x=70
 target9.y=10
+>>>>>>> origin/master
