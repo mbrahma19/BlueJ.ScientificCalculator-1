@@ -1,76 +1,150 @@
-import java.util.Math;
+import java.lang.Math;
 
 public class ScientificCalculator extends BasicCalculator
 {
     // instance variables - replace the example below with your own
-    private double x;
-    private double y;
-    String cosString;
-    String tanString;
-    String sinString;
-    String aCosString;
-    String aTanString;
-    String aSinString;
+    private double inputDegrees;
+    double radianX;
+    
+    
+    
 
     public ScientificCalculator()
-    {
+    { 
+        
         // initialise instance variables
-        x = 0;
+        
     }
-
-    public double trigFunc(double x)
-    {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
-
-            return super.add(y,x);
-        }
+    
+    public double degreesToRadians(double r){
+        
+        double radianX = Math.toRadians(inputDegrees);
+        
+        return radianX;
+        
     }
+    
 
-    public double trigFunc(double x)
+    public double cosRadFunc(double r)
     {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
+        double cosRad = Math.cos(radianX);
+        
+        System.out.println(cosRad);
+        
+        return cosRad;
+        
+        }
+    
 
-            return super.add(y,x);
+    public double acosRadFunc(double r)
+    {
+        double coshRad = Math.cosh(radianX);
+        
+        System.out.println(coshRad);
+        
+        return coshRad;
+        
+        }
+        
+    public double tanRadFunc(double r)
+    {
+        double tanRad = Math.tan(radianX);
+        
+        System.out.println(tanRad);
+        
+        return tanRad;
+        
         }
 
-    }   
-    public double trigFunc(double x)
+    public double tanhRadFunc(double r)
     {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
-
-            return super.add(y,x);
+        double tanhRad = Math.tanh(radianX);
+        
+        System.out.println(tanhRad);
+        
+        return tanhRad;
+        
         }
 
-    } 
-
-    public double trigFunc(double x)
+    public double sinRadFunc(double r)
     {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
-
-            return super.add(y,x);
+        double sinRad = Math.sin(radianX);
+        
+        System.out.println(sinRad);
+        
+        return sinRad;
+        
         }
-    }  
 
-    public double trigFunc(double x)
+    public double sinhRadFunc(double r)
     {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
-
-            return super.add(y,x);
+        double sinhRad = Math.sinh(radianX);
+        
+        System.out.println(sinhRad);
+        
+        return sinhRad;
+        
         }
-    }
-
-    public double trigFunc(double x)
+        
+        public double cosDegFunc(double d)
     {
-        if ( cosString = Math.cos(x)){
-            else if ( "rad" = 
-
-            return super.add(y,x);
+        double cosDeg = Math.toDegrees(d);
+        
+        System.out.println(cosDeg);
+        
+        return cosDeg;
+        
         }
-    }
+    
+
+    public double acosDegFunc(double d)
+    {
+        double coshDeg = Math.toDegrees(d);
+        
+        System.out.println(coshDeg);
+        
+        return coshDeg;
+        
+        }
+        
+    public double tanDegFunc(double d)
+    {
+        double tanDeg = Math.toDegrees(d);
+        
+        System.out.println(tanDeg);
+        
+        return tanDeg;
+        
+        }
+
+    public double tanhDegFunc(double d)
+    {
+        double tanhDeg = Math.tanh(d);
+        
+        System.out.println(tanhDeg);
+        
+        return tanhDeg;
+        
+        }
+
+    public double sinDegFunc(double d)
+    {
+        double sinDeg = Math.sin(d);
+        
+        System.out.println(sinDeg);
+        
+        return sinDeg;
+        
+        }
+
+    public double sinhDegFunc(double d)
+    {
+        double sinhDeg = Math.sinh(d);
+        
+        System.out.println(sinhDeg);
+        
+        return sinhDeg;
+        
+        }
 
 }
