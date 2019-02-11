@@ -54,7 +54,6 @@ public class BasicCalculatorTest
         double expected = 1.25;
         
         double actual = testCalc.divide(testInputOne, testInputTwo);
-        System.out.println();
         
         assertEquals(expected, actual, 0.001);
         
@@ -65,7 +64,7 @@ public class BasicCalculatorTest
         double testInputOne = 3;
         double testInputTwo = 0;
         double actual = testCalc.divide(testInputOne, testInputTwo);
-        //System.out.println("divide by 0" + actual);
+        
     }
     
     @Test

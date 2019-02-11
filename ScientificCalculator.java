@@ -79,86 +79,9 @@ public class ScientificCalculator extends BasicCalculator
 
         double sinhRad = Math.sinh(radianX);
 
-        System.out.println(sinhRad);
-
         return sinhRad;
 
     }
-/**
-    public double cosDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-
-        double cosDeg = Math.cos(radianX);
-
-        return cosDeg;
-    }
-
-
-    public double coshDegFunc(double d)
-    {
-        double normX = (d%360);
-        
-        double radianX = Math.toRadians(normX);
-
-        double coshDeg = Math.cosh(radianX);
-
-        return asinRad;
-    }
-
-    
-
-    public double tanDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-
-        double tanDeg = Math.tan(radianX);
-
-        System.out.println(tanDeg);
-
-        return tanDeg;
-    }
-
-    public double tanhDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-
-        double tanhDeg = Math.tanh(radianX);
-
-        System.out.println(tanhDeg);
-
-        return tanhDeg;
-    }
-
-    public double sinDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-
-        double sinDeg = Math.cos(radianX);
-
-        System.out.println(sinDeg);
-
-        return sinDeg;
-
-    }
-
-    public double sinhDegFunc(double d)
-    {
-        double normX = (d%360);
-        double radianX = Math.toRadians(normX);
-
-        double sinhDeg = Math.cos(radianX);
-
-        System.out.println(sinhDeg);
-
-        return sinhDeg;
-
-    }
-*/
 
     public String convertToBinary(double input1) {
         int myInt = (int)Math.round(input1);
