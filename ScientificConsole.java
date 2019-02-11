@@ -17,6 +17,11 @@ public class ScientificConsole extends BasicConsole
         // initialise instance variables
     }
 
+    public void printReturnString(String result, String operator){
+        String resultPrint = "This is your input converted into %s : %s";
+        String[] resultArr = {operator, result};
+        println(resultPrint,resultArr);
+    }
     /**
      * An example of a method - replace this comment with your own
      *
@@ -27,6 +32,7 @@ public class ScientificConsole extends BasicConsole
         double userNum1 = 0.0;
         double userNum2 = 0.0;
         double result = 0.0;
+        String resultString = "";
         boolean run = true;
 
         ScientificCalculator sc = new ScientificCalculator();
@@ -67,17 +73,14 @@ public class ScientificConsole extends BasicConsole
             }
             else if(operator.equals("bin") || operator.equals("hex") || operator.equals("oct")){
                 switch (operator) {
-                    case "sqrt": result = sc.squareRoot(userNum1);
+                    case "bin": resultString = sc.convertToBinary(userNum1);
                     break;
-                    case "1/x": result = sc.calcInverse(userNum1);
+                    case "hex": resultString = sc.convertToHex(userNum1);
                     break;
-                    case "x^2": result = sc.square(userNum1);
+                    case "oct": resultString = sc.convertToOctal(userNum1);
                     break;
-                    //case "-A": result = bc.square(userNum1);
-                    //break;
                 }
-                String strResult = String.valueOf(result);
-                console.printReturn(result);
+                console.printReturnString(resultString,operator);
                 console.returnToMain();
             }
             else{

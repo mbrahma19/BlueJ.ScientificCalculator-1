@@ -7,6 +7,7 @@ import java.io.PrintStream;
 import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.Font;
 
 /**
  * Write a description of class BasicConsole here.
@@ -43,6 +44,7 @@ public class BasicConsole
         f.setLayout(new FlowLayout());
         f.setSize(300, 200);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        label.setFont(new Font("Courier New", Font.BOLD, 30));
     }
 
     /**
