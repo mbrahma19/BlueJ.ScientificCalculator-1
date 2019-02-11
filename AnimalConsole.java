@@ -18,9 +18,15 @@ public class AnimalConsole extends BasicConsole
     }
 
     public void printReturn(double result, String operator){
-        String resultPrint = "This is your age in %s years : %s";
-        String[] resultArr = {operator, String.valueOf(result)};
-        println(resultPrint, resultArr);
+         if (Double.isInfinite(result) == true){
+            this.println("Answer resulted in error, please try again");
+        }
+        else{
+            String resultPrint = "Your answer is %s";
+            String[] resultArr = {String.valueOf(result)};
+            label.setText(String.valueOf(result));
+            println(resultPrint, resultArr);
+        }
     }
     
     public void animalMain(){
