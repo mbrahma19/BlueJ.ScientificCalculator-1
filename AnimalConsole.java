@@ -60,21 +60,10 @@ public class AnimalConsole extends BasicConsole
                 }
                 String strResult = String.valueOf(result);
                 console.printReturn(result,operator);
-                
-            }/*else{
-
-                String strResult = String.valueOf(result);
-                console.printReturn(result);
-            }*/
-            
-            String end = console.getStringInput("Continue or Quit");
-                   if (end.equalsIgnoreCase("Quit")){
-                       console.println("Goodbye");
-                       break;
-                    }
-                    
-            MainApplication.main(args);
-                    
+                console.returnToMain();
+            }else{
+            console.println("Sorry one of your inputs was incorrect, try again.");
+            }                   
         }
     }
     

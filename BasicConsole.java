@@ -3,6 +3,11 @@ import java.util.Scanner;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
+
+import java.awt.FlowLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 /**
  * Write a description of class BasicConsole here.
  *
@@ -15,6 +20,8 @@ public class BasicConsole
     private final Scanner scanner;
     private final PrintStream out;
     public final String[] args = {""};
+    public static JFrame f = new JFrame("Calculator");
+    public static JLabel label= new JLabel("0");
 
     /**
      * Constructor for objects of class BasicConsole
@@ -33,6 +40,9 @@ public class BasicConsole
         // initialise instance variables
         this.scanner = scanner;
         this.out = printStream;
+        f.setLayout(new FlowLayout());
+        f.setSize(300, 200);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
@@ -48,6 +58,14 @@ public class BasicConsole
      * @param val  : text to display on console
      * @param args : optional arguments to send for string formatting
      */
+
+    public String getDisplay(){
+        return label.getText();
+    }
+
+    public void clearDisplay(){
+        label.setText("0");
+    }
 
     public void print(String val, Object... args) {
         out.format(val, args);
@@ -65,17 +83,37 @@ public class BasicConsole
 
     public Double getDoubleInput(String prompt, Object... args) {
         println(prompt,args);
-        return scanner.nextDouble();
+        double result = scanner.nextDouble();
+        String strResult = String.valueOf(result);
+        label.setText(strResult);
+        return result;
     }
 
-    public void flush(){
-        this.out.flush();
-    }
-    
     public void printReturn(double result){
-        String resultPrint = "Your answer is %s";
-        String[] resultArr = {String.valueOf(result)};
-        println(resultPrint, resultArr);
+        if (Double.isInfinite(result) == true){
+            this.println("Answer resulted in error, please try again");
+        }
+        else{
+            String resultPrint = "Your answer is %s";
+            String[] resultArr = {String.valueOf(result)};
+            label.setText(String.valueOf(result));
+            println(resultPrint, resultArr);
+        }
+    }
+
+    public void returnToMain(){
+        String end = this.getStringInput("Continue or Quit");
+        if (end.equalsIgnoreCase("Quit")){
+            this.println("Goodbye");
+            System.exit(1);
+        } else if (end.equalsIgnoreCase("Continue")){
+            MainApplication.main(args);
+        }
+        else{
+            this.println("Sorry incorrect input, try again");
+            this.returnToMain();
+        }
+
     }
 
     public void basicMain(){
@@ -89,13 +127,15 @@ public class BasicConsole
         String numPrompt = "Please enter a number";
         String prompt = "Please enter an operation? Choose one below. " +  "\n" + "( + ) ( - ) ( * ) ( / ) (x^y) ( x^2 ) (sqrt) (1/x) (-A)";
         String numPrompt2 = "Please enter a second number";
-        
+
         while(run){
-            
+
             userNum1 = console.getDoubleInput(numPrompt);
-            //console.flush();
+            f.add(label);
+            f.setVisible(true);
+
             String operator = console.getStringInput(prompt);
-            //System.out.flush();
+
             if (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/") || operator.equals("x^y")) { 
                 userNum2 = console.getDoubleInput(numPrompt2);
                 switch (operator) {
@@ -113,8 +153,9 @@ public class BasicConsole
                 }
                 String strResult = String.valueOf(result);
                 console.printReturn(result);
-                
-            }else{
+                console.returnToMain();
+
+            }else if(operator.equals("sqrt") || operator.equals("1/x") || operator.equals("x^2") || operator.equals("-A")){
 
                 switch (operator) {
                     case "sqrt": result = bc.squareRoot(userNum1);
@@ -123,23 +164,17 @@ public class BasicConsole
                     break;
                     case "x^2": result = bc.square(userNum1);
                     break;
-                    //case "-A": result = bc.square(userNum1);
-                    //break;
+                    case "-A": result = bc.convertInputPosNeg(userNum1);
+                    break;
                 }
                 String strResult = String.valueOf(result);
                 console.printReturn(result);
+                console.returnToMain();
             }
-            
-            String end = console.getStringInput("Continue or Quit");
-                   if (end.equalsIgnoreCase("Quit")){
-                       console.println("Goodbye");
-                       break;
-                    }
-                    
-            MainApplication.main(args);
-                    
+            else{
+                console.println("Sorry one of your inputs was incorrect, try again.");
+            }
         }
-        //( sin ) ( cos ) ( tan ) ( asin ) ( acos ) ( atan ) ( sqrt ) ");
     }
 
 }
